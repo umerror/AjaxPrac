@@ -3,15 +3,27 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 bind_dummy_btn_click = ->
-  $('#dummy-book').click ->
-    alert('hello')
+  $('#dummy-book').click ->    
     $.ajax(
       url: '/books'
       type: 'POST'
       dataType: 'script'
-      data: {'book':{'name': 'dummy name', 'title': 'dummy title'}}
+      data: 
+        'book':
+          'name': 'dummy name' 
+          'title': 'dummy title'
     )
     
+bind_refresh_btn_click=->
+  $('#refresh').click ->
+    $.ajax
+      url: '/books'
+      type: 'GET'
+      dataType: 'html'
+      success: -> console.log("chal gaya")
+      
 
 $ ->
   bind_dummy_btn_click()
+$ ->
+  bind_refresh_btn_click()

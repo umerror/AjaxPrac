@@ -1,3 +1,10 @@
 $('#books').append("<%= escape_javascript render('book', book: @created_book) %>");
 $('#book-form').html("<%= escape_javascript render('form') %>")
-alert('hello world')
+
+// bind_refresh_btn_click=->
+//   $('#refresh').click =->
+//     $.get(
+//       url: '/books'
+//       type: 'GET'
+//       dataType: 'html'
+//        );
