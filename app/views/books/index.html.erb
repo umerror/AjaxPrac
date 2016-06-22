@@ -1,0 +1,26 @@
+<h1>Listing books</h1>
+
+<table id='books'>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @books.each do |book| %>
+    <%= render 'book', book: book %>
+  <% end %>
+</table>
+
+
+<br />
+<div id='book-form'>
+  <%= render 'form' %>
+</div>
+
+<%= button_to "Dummy Post", @book, remote: true %>
+<%= link_to "Dummy Post", '#', id: 'dummy-book' %>
+<%= link_to 'New Book', new_book_path %>
+<%= link_to "Refresh This Page!",'#', id: 'refresh'%>
