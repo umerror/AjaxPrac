@@ -20,7 +20,7 @@ bind_refresh_btn_click=->
       url: '/books'
       type: 'GET'
       dataType: 'html'
-      success: -> console.log("chal gaya")
+      success: -> console.log("Its Workinggggg!")
       
 
 $ ->
